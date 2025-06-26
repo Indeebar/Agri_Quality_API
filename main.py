@@ -21,7 +21,8 @@ app.add_middleware(
 
 # Load the model once at startup with correct relative path
 import tensorflow as tf
-model = tf.keras.models.load_model("saved_model")
+model = tf.keras.models.load_model("saved_model", compile=False)
+
 
 
 # Define class labels (adjust based on your training data)
