@@ -19,7 +19,10 @@ app.add_middleware(
 )
 
 # Load model once at startup
-model = load_model("agri_waste_quality_classifier.h5")
+from keras.models import load_model
+
+model = load_model("saved_model")
+
 
 # Manually define class labels in order (use your real order here)
 class_labels = [
